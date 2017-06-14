@@ -40,3 +40,8 @@ groups=<%= @group %>
 ; HTTP proxy
 http_proxy=<%= @http_proxy %>
 <% end -%>
+<% if @send_gecos != '' -%>
+
+; Send user comment instead of user name
+send_gecos=<%= @send_gecos %>
+<% end -%>
