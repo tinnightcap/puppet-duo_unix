@@ -40,8 +40,8 @@ class duo_unix (
       $gpg_file    = '/etc/pki/rpm-gpg/RPM-GPG-KEY-DUO'
 
       $pam_file = $::operatingsystemrelease ? {
-        /^5/ => '/etc/pam.d/system-auth',
-        /^(6|7|2014|2017)/ => '/etc/pam.d/password-auth'
+        /^(5|2017)/ => '/etc/pam.d/system-auth',
+        /^(6|7|2014)/ => '/etc/pam.d/password-auth'
       }
 
       $pam_module  = $::architecture ? {
