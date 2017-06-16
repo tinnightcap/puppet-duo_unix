@@ -27,7 +27,7 @@ class duo_unix::pam inherits duo_unix {
         'set /files/etc/ssh/sshd_config/ChallengeResponseAuthentication yes',
         'set /files/etc/ssh/sshd_config/PubkeyAuthentication yes',
         'set /files/etc/ssh/sshd_config/PasswordAuthentication no',
-        'set /files/etc/ssh/sshd_config/AuthenticationMethods publickey,keyboard-interactive',
+        'set /files/etc/ssh/sshd_config/AuthenticationMethods "publickey,keyboard-interactive publickey"',
         'set /files/etc/ssh/sshd_config/PermitRootLogin no'
     ],
       require => Package[$duo_unix::duo_package],
